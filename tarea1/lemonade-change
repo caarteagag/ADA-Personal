@@ -1,1 +1,37 @@
+class Solution {
+    public boolean lemonadeChange(int[] bills) {
+        int five = 0, ten = 0;
 
+        for (int bill : bills) {
+            if (bill == 5) {
+                five++;
+            } else if (bill == 10) {
+                if (five == 0) {
+                    return false;
+                }
+                five--;
+                ten++;
+            } else { // bill == 20
+                if (ten > 0 && five > 0) {
+                    // Preferencia 1: gastar un $10 + un $5
+                    ten--;
+                    five--;
+                } else if (five >= 3) {
+                    // Preferencia 2: tres $5
+                    five -= 3;
+                } else {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    // Método main opcional para probar localmente antes de subir a LeetCode.
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        System.out.println(sol.lemonadeChange(new int[]{5, 5, 5, 10, 20})); // true
+        System.out.println(sol.lemonadeChange(new int[]{5, 5, 10, 10, 20})); // false
+        System.out.println(sol.lemonadeChange(new int[]{5, 5, 10}));         // true
+    }
+}
