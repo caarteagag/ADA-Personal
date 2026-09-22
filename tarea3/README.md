@@ -72,3 +72,19 @@ es decir, un ciclo). La versión enviada a LeetCode es la de Kahn.
   total) + `indegree[]` + cola.
 
 ![Accepted — Course Schedule](evidencias/course-schedule-accepted.png)
+
+---
+
+## Estructura del repositorio
+
+```
+tarea3/
+├── README.md
+├── number-of-provinces/
+│   └── Solution.java
+├── course-schedule/
+│   └── Solution.java
+└── evidencias/
+    ├── number-of-provinces-accepted.png
+    └── course-schedule-accepted.png
+```

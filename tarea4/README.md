@@ -101,3 +101,19 @@ correcta es `false`.
 | Tipo de mochila | No acotada (monedas infinitas) | 0/1 (cada número una vez) |
 | Recorrido de la capacidad | `x = 1 → amount` (adelante) | `w = W → num` (atrás) |
 | Por qué | `dp[x − c]` **puede** incluir ya a `c` | `dp[w − num]` **no debe** incluir a `num` |
+
+---
+
+## Estructura del repositorio
+
+```
+tarea4/
+├── README.md
+├── coin-change/
+│   └── Solution.java
+├── partition-equal-subset-sum/
+│   └── Solution.java
+└── evidencias/
+    ├── coin-change-accepted.png
+    └── partition-equal-subset-sum-accepted.png
+```
